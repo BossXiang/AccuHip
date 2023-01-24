@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FlowController : MonoBehaviour
 {
-
-    [SerializeField] private GameObject stepControls;
     [SerializeField] private GameObject popupControls;
+    [SerializeField] private GameObject stepControls;
+    [SerializeField] private GameObject patientPopup, summaryPopup;
     [SerializeField] private List<GameObject> steps;
+    [SerializeField] private int initialStep;
     private int currentStep = 0;
+    private bool controlEnable = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +27,15 @@ public class FlowController : MonoBehaviour
     private void reset()
     {
         foreach(GameObject g in steps) g.gameObject.SetActive(false);
-        currentStep = 0;
+        currentStep = initialStep;
         steps[currentStep].gameObject.SetActive(true);
+        closePopups();
         updateControls();
     }
     
     private void updateControls()
     {
-        if(currentStep == 0)
+        if(currentStep <= 1)
         {
             stepControls.gameObject.SetActive(false);
             popupControls.gameObject.SetActive(false);
@@ -44,7 +47,7 @@ public class FlowController : MonoBehaviour
 
     public void goToLastStep()
     {
-        if (currentStep <= 0) return;
+        if (!controlEnable || currentStep <= 0) return;
         steps[currentStep].gameObject.SetActive(false);
         currentStep--;
         steps[currentStep].gameObject.SetActive(true);
@@ -53,12 +56,29 @@ public class FlowController : MonoBehaviour
 
     public void goToNextStep()
     {
-        Debug.Log("test");
-        if (currentStep >= steps.Count - 1) return;
+        if (!controlEnable || currentStep >= steps.Count - 1) return;
         steps[currentStep].gameObject.SetActive(false);
         currentStep++;
         steps[currentStep].gameObject.SetActive(true);
         updateControls();
     }
 
+    public void openPatientPopup()
+    {
+        controlEnable = false;
+        patientPopup.SetActive(true);
+    }
+
+    public void openSummaryPopup()
+    {
+        controlEnable = false;
+        summaryPopup.SetActive(true);
+    }
+
+    public void closePopups()
+    {
+        patientPopup.SetActive(false);
+        summaryPopup.SetActive(false);
+        controlEnable = true;
+    }
 }
