@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 02bd6dcb43278c544a3ad85d832b77af
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - supine: {instanceID: 0}
+  - supine_selected: {instanceID: 0}
+  - lateral: {instanceID: 0}
+  - lateral_selected: {instanceID: 0}
+  - supineObj: {instanceID: 0}
+  - lateralObj: {instanceID: 0}
+  - nextButton: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,7 @@ public class FlowController : MonoBehaviour
     [SerializeField] private GameObject popupControls;
     [SerializeField] private GameObject stepControls;
     [SerializeField] private GameObject patientPopup, summaryPopup;
+    [SerializeField] private GameObject lastStepButton, nextStepButton;
     [SerializeField] private List<GameObject> steps;
     [SerializeField] private int initialStep;
     private int currentStep = 0;
@@ -35,7 +36,7 @@ public class FlowController : MonoBehaviour
     
     private void updateControls()
     {
-        if(currentStep <= 1)
+        if(currentStep <= 1 || currentStep >= steps.Count - 1)
         {
             stepControls.gameObject.SetActive(false);
             popupControls.gameObject.SetActive(false);
@@ -43,6 +44,8 @@ public class FlowController : MonoBehaviour
             stepControls.gameObject.SetActive(true);
             popupControls.gameObject.SetActive(true);
         }
+        lastStepButton.SetActive(true);
+        nextStepButton.SetActive(true);
     }
 
     public void goToLastStep()
