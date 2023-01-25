@@ -6,7 +6,7 @@ public class FlowController : MonoBehaviour
 {
     [SerializeField] private GameObject popupControls;
     [SerializeField] private GameObject stepControls;
-    [SerializeField] private GameObject patientPopup, summaryPopup;
+    [SerializeField] private GameObject patientPopup, summaryPopup, femoralDiscPopup;
     [SerializeField] private GameObject lastStepButton, nextStepButton;
     [SerializeField] private List<GameObject> steps;
     [SerializeField] private int initialStep;
@@ -19,11 +19,6 @@ public class FlowController : MonoBehaviour
         reset();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void reset()
     {
@@ -45,8 +40,10 @@ public class FlowController : MonoBehaviour
             stepControls.gameObject.SetActive(true);
             popupControls.gameObject.SetActive(true);
         }
+
+        if(currentStep == 9) nextStepButton.SetActive(false);
+        else nextStepButton.SetActive(true);
         lastStepButton.SetActive(true);
-        nextStepButton.SetActive(true);
     }
 
     public void goToLastStep()
@@ -69,20 +66,30 @@ public class FlowController : MonoBehaviour
 
     public void openPatientPopup()
     {
+        if (!controlEnable) return;
         controlEnable = false;
         patientPopup.SetActive(true);
     }
 
     public void openSummaryPopup()
     {
+        if (!controlEnable) return;
         controlEnable = false;
         summaryPopup.SetActive(true);
+    }
+
+    public void openFemoralDiscPopup()
+    {
+        if (!controlEnable) return;
+        controlEnable = false;
+        femoralDiscPopup.SetActive(true);
     }
 
     public void closePopups()
     {
         patientPopup.SetActive(false);
         summaryPopup.SetActive(false);
+        femoralDiscPopup.SetActive(false);
         controlEnable = true;
     }
 }
