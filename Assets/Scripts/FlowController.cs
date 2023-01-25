@@ -27,6 +27,7 @@ public class FlowController : MonoBehaviour
 
     private void reset()
     {
+        //initialStep = 4;
         foreach(GameObject g in steps) g.gameObject.SetActive(false);
         currentStep = initialStep;
         steps[currentStep].gameObject.SetActive(true);
