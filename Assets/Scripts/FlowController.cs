@@ -22,17 +22,16 @@ public class FlowController : MonoBehaviour
 
     private void reset()
     {
-        //initialStep = 4;
-        foreach(GameObject g in steps) g.gameObject.SetActive(false);
+        foreach (GameObject g in steps) g.gameObject.SetActive(false);
         currentStep = initialStep;
         steps[currentStep].gameObject.SetActive(true);
         closePopups();
         updateControls();
     }
-    
+
     private void updateControls()
     {
-        if(currentStep <= 1 || currentStep >= steps.Count - 1)
+        if (currentStep <= 1 || currentStep >= steps.Count - 1)
         {
             stepControls.gameObject.SetActive(false);
             popupControls.gameObject.SetActive(false);
@@ -41,7 +40,7 @@ public class FlowController : MonoBehaviour
             popupControls.gameObject.SetActive(true);
         }
 
-        if(currentStep == 9) nextStepButton.SetActive(false);
+        if (currentStep == 9) nextStepButton.SetActive(false);
         else nextStepButton.SetActive(true);
         lastStepButton.SetActive(true);
     }

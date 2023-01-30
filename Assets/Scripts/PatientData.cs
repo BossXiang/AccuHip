@@ -2,31 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Side
+public enum Side
 {
     None, Left, Right
 }
-enum Workflow
+public enum Workflow
 {
     None, Supine, Lateral
 }
-class CupOrientation
+public class CupOrientation
 {
     public float Inclination, Anteversion;
 }
-class ReferencePlane
+public class ReferencePlane
 {
     public float Inclination, Anteversion;
 }
-class HipCenter_Rotation
+public class HipCenter_Rotation
 {
     public float Superior, Lateral, Anterior;
 }
-class LegLength_Offset
+public class LegLength_Offset
 {
     public float Inclination, Anteversion;
 }
-class SummaryInfo
+public class SummaryInfo
 {
     public CupOrientation cupOrientation;
     public ReferencePlane referencecPlane;
@@ -34,13 +34,25 @@ class SummaryInfo
     public LegLength_Offset legLength_Offset;
 }
 
+//Information 
 public class Patient
 {
-    private string PatientName;
+    private string name;
     private Side operatingSide = Side.None;
     private Workflow workflow = Workflow.None;
     private SummaryInfo summaryInfo;
+}
 
+// The information of the current patient
+public static class currentPatient {
+    public static string name;
+    public static Side operatingSide = Side.None;
+    public static Workflow workflow = Workflow.None;
+    public static SummaryInfo summaryInfo;
+    public static void initialization()
+    {
+        
+    }
 }
 
 
