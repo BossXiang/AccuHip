@@ -37,10 +37,17 @@ public class SummaryInfo
 //Information 
 public class Patient
 {
-    private string name;
+    private string date, name, gender, chart_number;
     private Side operatingSide = Side.None;
     private Workflow workflow = Workflow.None;
     private SummaryInfo summaryInfo;
+    public void initialization(string _date, string _name, string _gender, string _chartNumber)
+    {
+        date = _date;
+        name = _name;
+        gender = _gender;
+        chart_number = _chartNumber;
+    }
 }
 
 // The information of the current patient
