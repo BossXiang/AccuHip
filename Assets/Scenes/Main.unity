@@ -1321,7 +1321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69990939}
   m_Layer: 0
-  m_Name: Step2
+  m_Name: Step2_Patient_Information
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1772,8 +1772,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 93479940}
+  - component: {fileID: 93479941}
   m_Layer: 0
-  m_Name: Step12
+  m_Name: Step12_Registrate_Cup_Imapactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1797,6 +1798,58 @@ Transform:
   m_Father: {fileID: 541807472}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &93479941
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93479939}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6, y: 4.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &104825736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +1989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 135487066}
   m_Layer: 0
-  m_Name: Step9
+  m_Name: Step9_Femur_ROM_and_Obtain_Hip_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3745,7 +3798,7 @@ GameObject:
   - component: {fileID: 244842628}
   - component: {fileID: 244842629}
   m_Layer: 0
-  m_Name: Step13
+  m_Name: Step13_Cup_Adjustment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6202,6 +6255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394488797}
   - component: {fileID: 394488798}
+  - component: {fileID: 394488799}
   m_Layer: 0
   m_Name: 5_pic
   m_TagString: Untagged
@@ -6266,7 +6320,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cd2f273db82dbb346946a3a5d12ece3c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6276,6 +6330,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &394488799
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394488796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b11c3b3002661147aa86fa03d56f610, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &397937895
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,7 +7242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486544782}
   m_Layer: 0
-  m_Name: Step8
+  m_Name: Step8_Attach_Femoral_Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7630,7 +7704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521394051}
   m_Layer: 0
-  m_Name: Step17
+  m_Name: Step17_Surgery_Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7845,7 +7919,7 @@ GameObject:
   - component: {fileID: 554441314}
   - component: {fileID: 554441313}
   m_Layer: 0
-  m_Name: Step0
+  m_Name: Step0_Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9451,6 +9525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643901059}
   - component: {fileID: 643901060}
+  - component: {fileID: 643901061}
   m_Layer: 0
   m_Name: 6_pic
   m_TagString: Untagged
@@ -9525,6 +9600,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &643901061
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643901058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c28d5377712c474299c0d902909d151, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &646077620
 GameObject:
   m_ObjectHideFlags: 0
@@ -10362,6 +10457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687804138}
   - component: {fileID: 687804139}
+  - component: {fileID: 687804140}
   m_Layer: 0
   m_Name: 12_pic
   m_TagString: Untagged
@@ -10425,7 +10521,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 541ea05a3019c7a4ba0431ed4c086658, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad257e2eed9309c40b25c7e3d7310372, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10436,6 +10532,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &687804140
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687804137}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a75f5f58bc5f2014db0e7fa65e6b4754, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &690922725
 GameObject:
   m_ObjectHideFlags: 0
@@ -14910,7 +15026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036404520}
   m_Layer: 0
-  m_Name: Step16
+  m_Name: Step16_Summary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16612,7 +16728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179429016}
   m_Layer: 0
-  m_Name: Step7
+  m_Name: Step7_Anterior_Pelvic_Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19019,7 +19135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339637559}
   m_Layer: 0
-  m_Name: Step6
+  m_Name: Step6_Registration_tool_Calibration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20477,7 +20593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526384964}
   m_Layer: 0
-  m_Name: Step15
+  m_Name: Step15_Compare_Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23264,7 +23380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644749890}
   m_Layer: 0
-  m_Name: Step10
+  m_Name: Step10_Obtain_Baseline_Leg_Length_and_Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23593,7 +23709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698029123}
   m_Layer: 0
-  m_Name: Step5
+  m_Name: Step5_Insert_Pelvic_Pins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24579,7 +24695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783595830}
   m_Layer: 0
-  m_Name: Step11
+  m_Name: Step11_Ream_acetabulum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25456,7 +25572,7 @@ GameObject:
   - component: {fileID: 1814425569}
   - component: {fileID: 1814425570}
   m_Layer: 0
-  m_Name: Step4
+  m_Name: Step4_Operative_Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31545,7 +31661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2086515689}
   m_Layer: 0
-  m_Name: Step14
+  m_Name: Step14_Complete_femoral_components_and_registrate_disc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31988,7 +32104,7 @@ GameObject:
   - component: {fileID: 2138111190}
   - component: {fileID: 2138111191}
   m_Layer: 0
-  m_Name: Step3
+  m_Name: Step3_Workflow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
