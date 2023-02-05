@@ -3674,14 +3674,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243589319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.006, y: 0.0073529, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1766934156}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &243589321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30306,9 +30306,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem Ipsum is simply \r\ndummy text of the printing \r\nand typesetting
-    industry. the \r\nindustry's standard dummy \r\ntext ever since the 1500s, \r\nentially
-    unchanged."
+  m_text: 'i. Connect impactor marker to anywhere of cup impactor.
+
+
+    ii. Registrate
+    anterior and posterior tip center of the impactor respectively.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7163d80277fb25f4a92caf521cbdb33a, type: 2}
   m_sharedMaterial: {fileID: 3609450655351661096, guid: 7163d80277fb25f4a92caf521cbdb33a, type: 2}
@@ -30371,7 +30373,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -1.3461722, z: 2.696691, w: -1.1107379}
+  m_margin: {x: 0, y: -1.3461722, z: 2.6497076, w: -1.1107379}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
