@@ -3929,10 +3929,10 @@ MonoBehaviour:
   S_inclination_warning: {fileID: 21300000, guid: ce7c8891cfdb55848a5a74c8dd2ff13b, type: 3}
   S_pic: {fileID: 21300000, guid: b541df234080e2b4a9074b2ecb5376e0, type: 3}
   S_pic_warning: {fileID: 21300000, guid: 9e723dbfddd29c6459e21862ef8b1f18, type: 3}
-  anteversion_upper_bound: 30
-  anteversion_lower_bound: -30
-  inclination_upper_bound: 10
-  inclination_lower_bound: -10
+  anteversion_upper_bound: 25
+  anteversion_lower_bound: 5
+  inclination_upper_bound: 50
+  inclination_lower_bound: 30
   anteversion_text: {fileID: 2651908}
   inclination_text: {fileID: 1142885922}
 --- !u!1 &245530259
@@ -5201,7 +5201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1fd02dc55f1945c49a9a6a7963616295, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f2e60435455ea546b748d72c6e92160, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8404,12 +8404,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8bf59d260ced9624fa176a683ec8afae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08c3ad3c284861e45895737babf60a11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.31, y: 0.4}
+  m_Size: {x: 0.9, y: 0.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -12407,6 +12407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step1_trans: {fileID: 796132345}
   rowPrefab: {fileID: 1633878260220372134, guid: d17e72a0b240768458d7d4004e575c0c, type: 3}
+  rowBG: {fileID: 21300000, guid: 84479b498ac978c40a746d62a3598fed, type: 3}
+  rowBG_selected: {fileID: 21300000, guid: f1bcfe897716de8478ca72474c00b96b, type: 3}
 --- !u!1 &800063325
 GameObject:
   m_ObjectHideFlags: 0
@@ -13340,7 +13342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left ASIS
+  m_text: 'Right ASIS
 
 '
   m_isRightToLeft: 0
@@ -16997,12 +16999,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2baa536256a43a5439b77930f3b84aee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07fe59da3603ebf4ea46143a696ba883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 7.2}
+  m_Size: {x: 3.38, y: 0.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -27635,10 +27637,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41e30f3d8a42a04c950901e8c976996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: {fileID: 21300000, guid: bee7c9695445d1448b305df90b771828, type: 3}
-  left_selected: {fileID: 21300000, guid: 9502a367e14d7504b94a21f248efa55d, type: 3}
-  right: {fileID: 21300000, guid: 1fd02dc55f1945c49a9a6a7963616295, type: 3}
-  right_selected: {fileID: 21300000, guid: 81c9740aed9566d43a9c1ef1a8267485, type: 3}
+  left: {fileID: 21300000, guid: 06f43be547d3f02499fac8d3c1e0146a, type: 3}
+  left_selected: {fileID: 21300000, guid: c0fddd80d7892cc4ab988af83fa430cf, type: 3}
+  right: {fileID: 21300000, guid: 1f2e60435455ea546b748d72c6e92160, type: 3}
+  right_selected: {fileID: 21300000, guid: ad4e0aea038166a45bc6fb15500d84b2, type: 3}
   left_selected_pic: {fileID: 21300000, guid: 7cef82f912ca2884980d1f41d5e61fe4, type: 3}
   right_selected_pic: {fileID: 21300000, guid: c4a1e727153cf0b4c9db6ad80d6af11c, type: 3}
   picObj: {fileID: 1796003361}
@@ -30110,7 +30112,7 @@ MonoBehaviour:
   - {fileID: 1526384963}
   - {fileID: 1036404519}
   - {fileID: 521394050}
-  initialStep: 0
+  initialStep: 1
 --- !u!1 &1949050043
 GameObject:
   m_ObjectHideFlags: 0
@@ -39985,7 +39987,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bee7c9695445d1448b305df90b771828, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06f43be547d3f02499fac8d3c1e0146a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
