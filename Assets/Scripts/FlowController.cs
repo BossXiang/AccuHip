@@ -91,4 +91,9 @@ public class FlowController : MonoBehaviour
         femoralDiscPopup.SetActive(false);
         controlEnable = true;
     }
+
+    public void setControlEnable(bool _enable)
+    {
+        controlEnable = _enable;
+    }
 }
