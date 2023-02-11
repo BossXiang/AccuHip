@@ -11,8 +11,9 @@ public class Step1_Controller : MonoBehaviour
     [SerializeField] private FlowController flowController;
     [SerializeField] private Transform step1_trans;
     [SerializeField] private GameObject rowPrefab;
-    [SerializeField] private GameObject popupAdd, popupDelete;
+    [SerializeField] private GameObject popupAdd, popupDelete, popupSummary, popupInfo;
     [SerializeField] private Sprite rowBG, rowBG_selected;
+    [SerializeField] private TextMeshPro nameTxt;
     private List<GameObject> rows;
     private List<Patient> patients;
     private int lastSelectedIndex = -1;
@@ -21,6 +22,11 @@ public class Step1_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        popupAdd.gameObject.SetActive(false);
+        popupDelete.gameObject.SetActive(false);
+        popupSummary.gameObject.SetActive(false);
+        popupInfo.gameObject.SetActive(false);
+
         patients = new List<Patient>();
         rows = new List<GameObject>();
 
@@ -80,8 +86,30 @@ public class Step1_Controller : MonoBehaviour
     private void ItemEdit(string name)
     {
         int index = getIndex(name);
-
+        flowController.setControlEnable(false);
+        popupAdd.gameObject.SetActive(true);
     }
+
+    public void ItemCreate()
+    {
+        flowController.setControlEnable(false);
+        popupAdd.gameObject.SetActive(true);
+    }
+
+    public void saveEdit()
+    {
+
+        popupAdd.gameObject.SetActive(false);
+        flowController.setControlEnable(true);
+    }
+
+    public void revertEdit()
+    {
+
+        popupAdd.gameObject.SetActive(false);
+        flowController.setControlEnable(true);
+    }
+
     private void ItemDelete(string name)
     {
         int index = getIndex(name);
@@ -94,7 +122,11 @@ public class Step1_Controller : MonoBehaviour
     private void ItemInformation(string name)
     {
         int index = getIndex(name);
+        flowController.setControlEnable(false);
+        // Load data
+        nameTxt.text = patients[index].name;
 
+        popupSummary.gameObject.SetActive(true);
     }
 
     public void removeTargetedItem()
