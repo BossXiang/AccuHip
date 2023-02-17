@@ -38,27 +38,39 @@ public class SummaryInfo
 public class Patient
 {
     public string date, name, gender, chart_number;
+    public List<string> additionalInfo;
+    public int age;
     public Side operatingSide = Side.None;
     public Workflow workflow = Workflow.None;
     public SummaryInfo summaryInfo;
-    public void initialization(string _date, string _name, string _gender, string _chartNumber)
+    public void initialization(string _date, string _name, string _gender, string _chartNumber, int _age)
     {
         date = _date;
         name = _name;
         gender = _gender;
         chart_number = _chartNumber;
+        age = _age;
+        additionalInfo = new List<string>();
     }
 }
 
 // The information of the current patient
 public static class currentPatient {
-    public static string name;
+
+    public static string date, name, gender, chart_number;
+    public static List<string> additionalInfo;
+    public static int age;
     public static Side operatingSide = Side.None;
     public static Workflow workflow = Workflow.None;
     public static SummaryInfo summaryInfo;
-    public static void initialization()
+    public static void initialization(string _date, string _name, string _gender, string _chartNumber, int _age)
     {
-        
+        date = _date;
+        name = _name;
+        gender = _gender;
+        chart_number = _chartNumber;
+        age = _age;
+        additionalInfo = new List<string>();
     }
 }
 

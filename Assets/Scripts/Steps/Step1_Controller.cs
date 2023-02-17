@@ -2,6 +2,7 @@ using Microsoft.MixedReality.Toolkit.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,9 @@ public class Step1_Controller : MonoBehaviour
     [SerializeField] private GameObject rowPrefab;
     [SerializeField] private GameObject popupAdd, popupDelete, popupSummary, popupInfo;
     [SerializeField] private Sprite rowBG, rowBG_selected;
-    [SerializeField] private TextMeshPro nameTxt;
+    [SerializeField] private TextMeshPro nameTxt, informationTxt;
+    [SerializeField] private TextMeshPro step2NameTxt, step2InformationTxt;
+    [SerializeField] private TextMeshPro popupNameTxt, popupInformationTxt;
     private List<GameObject> rows;
     private List<Patient> patients;
     private int lastSelectedIndex = -1;
@@ -31,13 +34,19 @@ public class Step1_Controller : MonoBehaviour
         rows = new List<GameObject>();
 
         Patient patient = new Patient();
-        patient.initialization("01/02/2021", "Jason Lee", "male", "6809203819");
+        patient.initialization("01/02/2021", "Jason Lee", "male", "6809203819", 63);
+        patient.additionalInfo.Add("L hip osteonecrosis");
+        patient.additionalInfo.Add("Zimmer Biomet G7 cup + E1 liner + M/L taper stem");
         patients.Add(patient);
         Patient patient2 = new Patient();
-        patient2.initialization("01/03/2021", "Tom", "male", "6809203820");
+        patient2.initialization("01/03/2021", "Tom", "male", "6809203820", 57);
+        patient2.additionalInfo.Add("L hip osteonecrosis");
+        patient2.additionalInfo.Add("Zimmer Biomet G7 cup + E1 liner + M/L taper stem");
         patients.Add(patient2);
         Patient patient3 = new Patient();
-        patient3.initialization("01/04/2021", "Johnson", "male", "6809203821");
+        patient3.initialization("01/04/2021", "Johnson", "male", "6809203821", 98);
+        patient3.additionalInfo.Add("L hip osteonecrosis");
+        patient3.additionalInfo.Add("Zimmer Biomet G7 cup + E1 liner + M/L taper stem");
         patients.Add(patient3);
 
         for(int i = 0;i < patients.Count; i++)
@@ -125,6 +134,8 @@ public class Step1_Controller : MonoBehaviour
         flowController.setControlEnable(false);
         // Load data
         nameTxt.text = patients[index].name;
+        informationTxt.text = $" - {patients[index].age} y/o {patients[index].gender}";
+        for(int i = 0;i < patients[index].additionalInfo.Count;i++) informationTxt.text += Environment.NewLine + " - " + patients[index].additionalInfo[i];
 
         popupSummary.gameObject.SetActive(true);
     }
@@ -145,6 +156,20 @@ public class Step1_Controller : MonoBehaviour
     public void proceedToStart()
     {
         if (lastSelectedIndex == -1) return;
+
+        currentPatient.initialization(patients[lastSelectedIndex].date, patients[lastSelectedIndex].name, patients[lastSelectedIndex].gender, patients[lastSelectedIndex].chart_number, patients[lastSelectedIndex].age);
+        currentPatient.additionalInfo.Clear();
+        foreach (string info in patients[lastSelectedIndex].additionalInfo) currentPatient.additionalInfo.Add(info);
+
+        // Load data
+        step2NameTxt.text = currentPatient.name;
+        step2InformationTxt.text = $" - {currentPatient.age} y/o {currentPatient.gender}";
+        for (int i = 0; i < currentPatient.additionalInfo.Count; i++) step2InformationTxt.text += Environment.NewLine + " - " + currentPatient.additionalInfo[i];
+
+        popupNameTxt.text = currentPatient.name;
+        popupInformationTxt.text = $" - {currentPatient.age} y/o {currentPatient.gender}";
+        for (int i = 0; i < currentPatient.additionalInfo.Count; i++) popupInformationTxt.text += Environment.NewLine + " - " + currentPatient.additionalInfo[i];
+
         flowController.goToNextStep();
     }
 
